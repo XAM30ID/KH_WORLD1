@@ -1,0 +1,89 @@
+header {
+    width: 100%;
+    background: rgb(50,63,63);
+    height: 80px;
+    opacity: 85%;
+    border-radius: 0px 0px 25px 25px;
+}
+
+.title {
+    font-size: 48px;
+    padding-top: 10px;
+    text-align: left;
+    padding-left: 30px;
+    color: rgb(191,239,236);
+}
+
+a {
+    color: rgb(191,239,236);
+}
+
+.user_adding {
+    font-size: 24px;
+    padding-top: 10px;
+    padding-right: 30px;
+    text-align: right;
+}
+body {
+    margin: 0;
+    padding: 0;
+    background: rgb(180,203,203);
+}
+
+.co_creators {
+   width: 80%;
+   border: 1px solid grey;
+}
+
+.co_creators_cont {
+   padding-left: 15%;
+}
+
+.image_text {
+    position: relative;
+    text-align: left;
+}
+
+.nick {
+    font-size: 42px;
+    opacity: 95%;
+    background-color: rgb(75,75,75);
+    top: 0;
+    position: absolute;
+    color: white;
+}
+
+.main_image {
+    object-fit: cover;
+    width: 500px;
+    height: 650px;
+}
+
+.inf {
+    position: relative;
+    text-align: left;
+    width: 60%;
+}
+
+.name {
+    position: absolute;
+    font-size: 48px;
+}
+
+.about {
+    top: 0;
+    font-size: 32px;
+
+}
+
+.link_img {
+    object-fit: cover;
+    width: 50px;
+    height: 50px;
+
+}
+.link_img:hover {
+  -webkit-transform: scale(1.2);
+  -ms-transform: scale(1.2);
+  transform: scale(1.2);
+}

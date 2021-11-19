@@ -1,0 +1,55 @@
+{% extends 'base.html' %}
+
+{% block links %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/main_page_style.css') }}">
+{% endblock %}
+
+{% block title %}
+Я всё ещё шагаю!
+{% endblock %}
+
+
+{% block body %}
+<header>
+    <table width="100%">
+        <tr>
+            <th><div class= "title">KH-World</div></th>
+            <th><div class= "user_adding"><a href="/person-adding">Добавить влиятеля</a></div></th>
+        </tr>
+    </table>
+</header>
+{% for elem in persons %}
+<br>
+    <div class="co_creators_cont">
+        <table class="co_creators">
+            <tr>
+                <td rowspan="3">
+                    <div class="image_text">
+                        <img class="main_image" src="static/images/{{ elem.name_lastname }}/1.jpg">
+                        <h2 class="nick">{{ elem.nickname }}</h2>
+                    </div>
+                </td>
+                <td>
+                    <h2 class="name">{{ elem.name_lastname }}</h2>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="inf">
+                    <div class="about">
+                        <br>{{ elem.about }}
+                    </div>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <a href="{{ elem.inst_link }}" target="_blank"><img class="link_img" src="static/images/other/inst.png"></a>
+                    <a href="{{ elem.vk_link }}" target="_blank"><img class="link_img" src="static/images/other/vk.png"></a>
+                </td>
+            </tr>
+        </table>
+    </div>
+{% endfor %}
+
+{% endblock %}

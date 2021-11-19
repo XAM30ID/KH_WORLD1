@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+{% block links %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/user_adding_page_style.css') }}">
+{% endblock %}
+
+{% block title %}
+Добавление влиятеля
+{% endblock %}
+
+
+{% block body %}
+<header><table width="100%">
+        <tr>
+            <th><div class= "title">Добавление влиятеля</div></th>
+            <th><div class="back"><a href="/">Вернуться</a></div></th>
+        </tr>
+    </table>
+</header>
+<div class="form">
+    <form method="post" enctype="multipart/form-data">
+        <input type="text" name="nickname" id="nickname" class="form-control" placeholder="Псевдоним"><br>
+        <input type="text" name="name_lastname" id="name_lastname" class="form-control" placeholder="Имя и фамилия"><br>
+        <textarea name="about" id="about" class="form-control" placeholder="О влиятеле"></textarea><br>
+        <input type="text" name="vk_link" id="vk_link" class="form-control" placeholder="Вконтакте"><br>
+        <input type="text" name="inst_link" id="inst_link" class="form-control" placeholder="Инстаграм"><br>
+        <input type="text" name="secret" id="secret" class="form-control" placeholder="Пасхалка"><br>
+        <div>Фотки (2-3 штуки)</div>
+        <input multiple type="file" name="photo" id="photo" class="form-control"><br><br>
+        <input type="submit" class="btn btn-success" value="Добавить">
+    </form>
+</div>
+{% endblock %}
